@@ -13,6 +13,7 @@ Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
@@ -33,8 +34,7 @@ inoremap {;<CR> {<CR>};<ESC>O
 "only in html, cshtml, vue
 autocmd FileType html,cshtml,vue inoremap < <><left>
 
-
-"basic vim config: https://github.com/amix/vimrc
+"basic vim config settings from https://github.com/amix/vimrc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -140,6 +140,10 @@ set foldcolumn=1
 " Enable syntax highlighting
 syntax enable
 
+colorscheme dracula
+set t_Co=256
+set termguicolors
+
 " Set regular expression engine automatically
 set regexpengine=0
 
@@ -195,10 +199,10 @@ map <C-space> ?
 map <silent> <leader><cr> :noh<cr>
 
 " Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+"map <C-j> <C-W>j
+"map <C-k> <C-W>k
+"map <C-h> <C-W>h
+"map <C-l> <C-W>l
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
